@@ -13,7 +13,7 @@ export default {
   name: "app",
   data() {
     return {
-      isLogin: false
+      isLogin: false,
       userData: null
     };
   },
@@ -22,7 +22,7 @@ export default {
       console.log(user);
       if (user) {
         this.isLogin = true;
-        this.userData = userData;
+        this.userData = user;
       } else {
         this.isLogin = false;
         this.userData = null;
