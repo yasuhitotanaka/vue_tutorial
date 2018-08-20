@@ -2,6 +2,7 @@
   <div id="home">
     <h1>{{ msg }}</h1>
     <button @click="googleLogin">Googleアカウントでログイン</button>
+    <button @click="twitterLogin">Twitterアカウントでログイン</button>
   </div>
 </template>
 
@@ -18,6 +19,11 @@ export default {
       firebase
         .auth()
         .signInWithRedirect(new firebase.auth.GoogleAuthProvider());
+    },
+    twitterLogin: function() {
+      firebase
+        .auth()
+        .signInWithRedirect(new firebase.auth.TwitterAuthProvider());
     }
   }
 };

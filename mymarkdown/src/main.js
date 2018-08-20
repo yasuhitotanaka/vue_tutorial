@@ -1,5 +1,5 @@
-import 'shitajicss/docs/css/shitaji.min.css';
-import './scss/style.scss';
+import './scss/shitaji.min.css';
+import './scss/style.css';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
