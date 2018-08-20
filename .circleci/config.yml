@@ -8,14 +8,14 @@ deploy-job:
        command: ./node_modules/.bin/firebase deploy --token="1/OV5xGfb_5CqiCKIhxLgJH0A3U6t-Ju0rjxeOmSW4igA"
 
 workflows:
-version: 2
+  version: 2
 
--deploy:
-  jobs:
-    - build-job
-    - deploy-job:
-        requires:
-          - build-job
-        filters:
-          branches:
-            only: master
+  -deploy:
+    jobs:
+      - build-job
+      - deploy-job:
+          requires:
+            - build-job
+          filters:
+            branches:
+              only: master
